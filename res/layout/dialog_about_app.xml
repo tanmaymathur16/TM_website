@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_about"
+    android:layout_width="@dimen/dim_300"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dialogHeaderApp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_45"
+        android:background="@drawable/white_bar"
+        android:gravity="center"
+        android:text="About the app"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/dim_22"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dialogAboutApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/black_trans_dialog_bg"
+        android:gravity="fill_horizontal"
+        android:padding="@dimen/dim_15"
+        android:text="You will see 7 pages, one followed by the other..\n\nClick on Yes, if the existing page contains your age, or else, \n\nClick on No, if the existing page doesn&apos;t contain your age"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/dim_18" />
+
+    <Button
+        android:id="@+id/btnAboutApp"
+        android:layout_width="@dimen/dim_280"
+        android:layout_height="@dimen/dim_40"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dim_10"
+        android:background="@drawable/purplebutton"
+        android:text="Got it!"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/dim_24"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgabout"
+    tools:context=".AboutActivity" >
+
+    <ScrollView
+        android:id="@+id/scrollAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <RelativeLayout
+            android:id="@+id/relativeAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#33FFFFFF" >
+
+            <ImageView
+                android:id="@+id/imgAboutCubeTech"
+                android:layout_width="@dimen/dim_270"
+                android:layout_height="@dimen/dim_60"
+                android:scaleType="fitXY"
+                android:src="@drawable/ws_cubetech" />
+
+            <TextView
+                android:id="@+id/txtPanel"
+                android:layout_width="@dimen/dim_270"
+                android:layout_height="@dimen/dim_150"
+                android:layout_below="@+id/imgAboutCubeTech"
+                android:background="@drawable/panel"
+                android:gravity="center"
+                android:padding="@dimen/dim_10"
+                android:text="An age calculator app, which will analyse your input towards different pages which come into picture and on the basis of those binary inputs, the app will compute your age"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/dim_15" />
+
+            <RelativeLayout
+                android:id="@+id/relativeInsidePhn"
+                android:layout_width="@dimen/dim_220"
+                android:layout_height="@dimen/dim_35"
+                android:layout_below="@+id/txtPanel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim_5"
+                android:background="@drawable/box_"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dim_5" >
+
+                <Button
+                    android:id="@+id/btnPhnIcon"
+                    android:layout_width="@dimen/dim_25"
+                    android:layout_height="@dimen/dim_25"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/phn"
+                    android:onClick="phoneDial" />
+
+                <Button
+                    android:id="@+id/btnPhnNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/btnPhnIcon"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:onClick="phoneDial"
+                    android:paddingLeft="@dimen/dim_10"
+                    android:text="+91-9269-69-8122"
+                    android:textSize="@dimen/dim_16" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeInsideMail"
+                android:layout_width="@dimen/dim_220"
+                android:layout_height="@dimen/dim_35"
+                android:layout_below="@+id/relativeInsidePhn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim_10"
+                android:background="@drawable/box_"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dim_5" >
+
+                <Button
+                    android:id="@+id/btnMailIcon"
+                    android:layout_width="@dimen/dim_25"
+                    android:layout_height="@dimen/dim_25"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/msg"
+                    android:onClick="mailSending" />
+
+                <Button
+                    android:id="@+id/btnMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/btnMailIcon"
+                    android:layout_toRightOf="@+id/btnMailIcon"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:onClick="mailSending"
+                    android:paddingLeft="@dimen/dim_10"
+                    android:text="info@wscubetech.com"
+                    android:textSize="@dimen/dim_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeInsideWeb"
+                android:layout_width="@dimen/dim_220"
+                android:layout_height="@dimen/dim_35"
+                android:layout_below="@+id/relativeInsideMail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim_10"
+                android:background="@drawable/box_"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dim_5" >
+
+                <Button
+                    android:id="@+id/btnWebIcon"
+                    android:layout_width="@dimen/dim_25"
+                    android:layout_height="@dimen/dim_25"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/web_1"
+                    android:onClick="visitSite" />
+
+                <Button
+                    android:id="@+id/btnWeb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/btnWebIcon"
+                    android:layout_toRightOf="@+id/btnWebIcon"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:onClick="visitSite"
+                    android:paddingLeft="@dimen/dim_10"
+                    android:text="www.wscubetech.com"
+                    android:textSize="@dimen/dim_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeFooter"
+                android:layout_width="@dimen/dim_270"
+                android:layout_height="@dimen/dim_90"
+                android:layout_below="@+id/relativeInsideWeb"
+                android:layout_marginTop="@dimen/dim_15"
+                android:background="@drawable/panel"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/txtFooter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Developed by:"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="@dimen/dim_16" />
+
+                <TextView
+                    android:id="@+id/txtFooterName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtFooter"
+                    android:gravity="center"
+                    android:text="Sachin Rupani"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="@dimen/dim_17" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
